@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app>
+<head>
+	<meta charset="UTF-8" />
+	<!-- Not work with 1.3.. -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script src="myscript.js"></script>
+	<style type="text/css">
+		.even {background:#ccc;}
+		.odd {background:red;}
+	</style>
+	<title>Angularの練習</title>
+</head>
+<body>
+	<h1>AngularJSの練習</h1>
+	<div ng-controller="mainCtrl">
+		<p>{{users.length}} users.</p>
+		<ul>
+			<li ng-repeat="user in users" ng-class-even="'even'" ng-class-odd="'odd'">
+				{{$index+1}} {{$first}} {{$middle}} {{$last}} {{user.name}} {{user.score}}
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
