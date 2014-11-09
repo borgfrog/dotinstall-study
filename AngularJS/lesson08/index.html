@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app>
+<head>
+	<meta charset="UTF-8" />
+	<!-- Not work with 1.3.. -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+	<script src="myscript.js"></script>
+	<title>Angularの練習</title>
+</head>
+<body>
+	<h1>AngularJSの練習</h1>
+	<div ng-controller="mainCtrl">
+		<form name="myForm" ng-submit="addUser()">
+			<p>Name:<input type="text" name="name" ng-model="user.name" /></p>
+			<p><input type="submit" value="add"/></p>
+		</form>
+		<pre>{{user|json}}</pre>
+	</div>
+</body>
+</html>
